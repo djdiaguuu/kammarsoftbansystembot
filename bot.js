@@ -1,8 +1,14 @@
-const Discord = require('discord.js');
-const bot = New Discord.Client();
 
-bot.on("ready"), function (){
-	console.log('$(bot.user.name') Is online!');
+const Files = require(require('path').join(__dirname, 'js', 'Main.js')).Files;
+
+if(!process.send) {
+
+Files.initStandalone();
+
+} else {
+
+process.on('message', function(content) {
+	Files.initBotTest(content);
 });
 
-bot.login('process.env.token');
+}
