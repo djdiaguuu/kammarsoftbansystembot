@@ -1,19 +1,8 @@
-/*
- * Discord Bot Builder Bot
- * Version 1.2.0
- * Robert Borghese
- */
+const Discord = require('discord.js');
+const bot = New Discord.Client();
 
-const Files = require(require('path').join(__dirname, 'js', 'Main.js')).Files;
-
-if(!process.send) {
-
-Files.initStandalone();
-
-} else {
-
-process.on('message', function(content) {
-	Files.initBotTest(content);
+bot.on("ready"), function (){
+	console.log('$(bot.user.name') Is online!');
 });
 
-}
+bot.login('process.env.token');
